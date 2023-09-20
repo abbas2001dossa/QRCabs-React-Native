@@ -29,10 +29,15 @@ const MobileNumberScreen = () => {
     };
     
     const ForwardNumber =()=>{
-        if(number.length != 10){
+        if(number.length !== 10 || checkboxmark== false){
+            if (checkboxmark== false){
+              Alert.alert("Read the terms And Conditions "," Check the checkbox !");
+              return;
+            }
             Alert.alert("Invalid Number "," Use a 11 digit number !");
         }else{
             console.log("fs");
+            navigation.navigate('OTP',{phonenumber:number});
         }
     };
 
@@ -40,14 +45,14 @@ const MobileNumberScreen = () => {
     return (
     <SafeAreaView style={Tw`bg-[#FFFFFF] h-100%`}>
         {/*Qr cabs image  */}
-      <View style={Tw` h-33% bg-[#d6f22c] `}>
+      <View style={Tw` h-25% bg-[#d6f22c] `}>
         <TouchableOpacity onPress={()=>navigation.navigate('Help')} style={[Tw`absolute z-1 top-32px flex-row border p-1 left-256px rounded-sm`, { borderColor: '#0b4348' }]}>
           <EvilIcons name="question" size={24} color="#0b4348" />
           <Text style={[Tw`text-[#0b4348] text-16px font-normal`,{fontFamily: TTFirsNeueTrlLight}]}>Help</Text>
         </TouchableOpacity> 
         
         
-        <View style={Tw`flex-col top-111px left-16px`}>
+        <View style={Tw`flex-col mt-15 left-16px`}>
             <FontAwesome style={Tw``} name="phone" size={35} color="#0b4348" />
             <View style={[Tw`w-261px h-60px mt-2`,{gap:8}]}>
                 <Text style={[Tw`text-24px text-[#282828]`,{fontFamily: TTFirsNeueTrlLight,fontWeight:"300"}]}>Enter mobile number</Text>
@@ -74,7 +79,7 @@ const MobileNumberScreen = () => {
 
       {/* checker */}
       <View style={[Tw`flex-row h-38px w-328px mt-5  left-16px`,{gap:16}]}>
-        <MaterialCommunityIcons onPress={()=>setCheckboxmark(!checkboxmark)} name={checkboxmark? "checkbox-blank-outline" :"checkbox-marked"} size={30} color="black" />
+        <MaterialCommunityIcons onPress={()=>setCheckboxmark(!checkboxmark)} name={checkboxmark? "checkbox-marked" : "checkbox-blank-outline"} size={30} color="black" />
         <Text style={[Tw`text-12px text-[#282828]`,{fontWeight:"300",fontFamily: TTFirsNeueTrlLight, maxWidth: 260}]}>By entering your number you agree the terms and conditions of qr cabs technologies</Text>
       </View>
 
