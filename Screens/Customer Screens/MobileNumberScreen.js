@@ -2,7 +2,7 @@ import {SafeAreaView,TouchableOpacity, View,Image, Text,ScrollView, Alert } from
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import Tw from 'twrnc';
-import  {TTFirsNeueTrlLight} from '../assets/fonts/TT Firs Neue Trial Light.ttf';
+import  {TTFirsNeueTrlLight} from '../../assets/fonts/TT Firs Neue Trial Light.ttf';
 import { EvilIcons } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
 import { useState } from 'react';
@@ -63,7 +63,7 @@ const MobileNumberScreen = () => {
 
       <View style={[Tw`flex-row w-326px h-61px border left-16px rounded-10px pt-12px pr-35px pb-12px pl-16px mt-10`,{gap:32 , borderColor:"#0b4348"}]}>
         <View style={[Tw`w-79px h-37px flex-row items-center`,{gap:6}]}>
-            <Image style={Tw`w-42px h-37px`} source={require('../assets/images/indianFlag.png')}></Image>
+            <Image style={Tw`w-42px h-37px`} source={require('../../assets/images/indianFlag.png')}></Image>
             <Text style={[Tw`text-20px text-[#282828] `,{fontFamily: TTFirsNeueTrlLight,fontWeight:"300"}]}>{countryCode}</Text>
         </View>
         <View style={[Tw`w-164px h-37px flex-row items-center`,{}]}>
@@ -103,7 +103,7 @@ const MobileNumberScreen = () => {
         <View style={[Tw`flex-row w-328px h-90px `,{gap:29}]}>
             <TouchableOpacity onPress={handleRemoveLastDigit} style={[Tw`bg-[#FCFCFC] shadow-sm w-90px h-90px pt-19px pr-38px justify-center pb-19px pl-30px`,{gap:10}] }><Feather name="delete" size={20} color="black" /></TouchableOpacity>
             <TouchableOpacity onPress={()=>setNumber(number + '0')}  style={[Tw`bg-[#FCFCFC] shadow-sm w-90px h-90px pt-19px pr-38px justify-center pb-19px pl-38px`,{gap:10}] }><Text style={[Tw`text-24px text-[#282828]`,{fontWeight:"400"}]}>0</Text></TouchableOpacity>
-            <TouchableOpacity onPress={ForwardNumber} style={[Tw`bg-[#d6f22c] shadow-sm w-90px h-90px pt-19px justify-center pr-38px pb-19px pl-38px`,{gap:10}] }><Image style={Tw`h-28px w-28px`} source={require('../assets/images/forward.png')}></Image></TouchableOpacity>
+            <TouchableOpacity onPress={ForwardNumber} style={[Tw`bg-[#d6f22c] shadow-sm w-90px h-90px pt-19px justify-center pr-38px pb-19px pl-38px`,{gap:10}] }><Image style={Tw`h-28px w-28px`} source={require('../../assets/images/forward.png')}></Image></TouchableOpacity>
         </View>
       </ScrollView>
 

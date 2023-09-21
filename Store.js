@@ -1,12 +1,10 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { configureStore } from '@reduxjs/toolkit';
+// import restaurantReducer from './features/restaurantSlice';
+import DriverDetailsSlice from './Redux/Drivers Redux/DriverDetailsSlice';
 
-const Store = () => {
-  return (
-    <View>
-      <Text>Store</Text>
-    </View>
-  )
-}
-
-export default Store
+export const Store = configureStore({
+  reducer: {
+    DriverDetails: DriverDetailsSlice,
+    // basket: basketReducer,
+  },
+})

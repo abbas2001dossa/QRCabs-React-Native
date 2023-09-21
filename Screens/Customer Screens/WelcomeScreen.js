@@ -2,7 +2,7 @@ import {StyleSheet, View, Text ,Image ,SafeAreaView , TouchableOpacity} from 're
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import Tw from 'twrnc';
-import  {TTFirsNeueTrlLight} from '../assets/fonts/TT Firs Neue Trial Light.ttf';
+import  {TTFirsNeueTrlLight} from '../../assets/fonts/TT Firs Neue Trial Light.ttf';
 import { EvilIcons } from '@expo/vector-icons'; 
 
 
@@ -36,7 +36,7 @@ const WelcomeScreen = () => {
                 <Text style={[Tw`text-[#0b4348] text-16px font-normal`,{fontFamily: TTFirsNeueTrlLight}]}>Help</Text>
             </TouchableOpacity>
 
-            <Image style={[Tw`mt-10  w-45% h-45%`,{resizeMode:"contain"}]} source={require('../assets/images/QRCabs-image.png')}></Image>
+            <Image style={[Tw`mt-10  w-45% h-45%`,{resizeMode:"contain"}]} source={require('../../assets/images/QRCabs-image.png')}></Image>
         </View>
 
         <View style={Tw`items-center mt-5`}>
@@ -56,12 +56,12 @@ const WelcomeScreen = () => {
             {/*  register with google or facebook  */}
             <View style={[Tw`mt-10 `,{gap:19}]}>
                 <TouchableOpacity onPress={openWithGoogle} style={[Tw`flex-row items-center bg-[#FFFFFF] shadow-md w-151px h-48px px-12px rounded-2px`,{gap:8}]}>
-                    <Image style={Tw`h-24px w-24px`} source={require('../assets/images/google.png')}></Image>
+                    <Image style={Tw`h-24px w-24px`} source={require('../../assets/images/google.png')}></Image>
                     <Text style={[Tw`text-14px text-[#282828]`,{fontFamily: TTFirsNeueTrlLight , fontWeight:"600"}]}> Google</Text>
                 </TouchableOpacity> 
 
                 <TouchableOpacity onPress={openWithFacebook} style={[Tw`flex-row items-center bg-[#FFFFFF] shadow-md w-151px h-48px px-12px rounded-2px`,{gap:8}]}>
-                    <Image style={Tw`h-24px w-24px`} source={require('../assets/images/facebook.png')} ></Image>
+                    <Image style={Tw`h-24px w-24px`} source={require('../../assets/images/facebook.png')} ></Image>
                     <Text style={[Tw`text-14px text-[#282828]`,{fontFamily: TTFirsNeueTrlLight , fontWeight:"600"}]} > Facebook</Text>
                 </TouchableOpacity>
             </View>             

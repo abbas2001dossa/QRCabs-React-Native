@@ -1,7 +1,7 @@
 import { TextInput,TouchableOpacity,SafeAreaView,Image,View, Text ,KeyboardAvoidingView,Alert} from 'react-native'
 import React from 'react'
 import Tw from 'twrnc';
-import  {TTFirsNeueTrlLight} from '../assets/fonts/TT Firs Neue Trial Light.ttf';
+import  {TTFirsNeueTrlLight} from '../../assets/fonts/TT Firs Neue Trial Light.ttf';
 import { EvilIcons } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
@@ -21,7 +21,7 @@ const LocationScreen = () => {
         
         
         <View style={[Tw`flex-col mt-160px left-16px h-113px w-259px`,{gap:15}]}>
-            <Image source={require('../assets/images/location.png')} style={Tw`w-32px h-32px`}></Image>
+            <Image source={require('../../assets/images/location.png')} style={Tw`w-32px h-32px`}></Image>
             <View style={[Tw`w-259px h-113px`,{gap:15}]}>
                 <Text style={[Tw`text-24px text-[#282828]`,{fontFamily: TTFirsNeueTrlLight,fontWeight:"300"}]}>Set your location</Text>
                 <Text style={[Tw`text-14px text-[#282828]`,{fontFamily: TTFirsNeueTrlLight,fontWeight:"300" , }]}>Kindly share location permission to help us improve your ride booking and pickup experience.</Text>

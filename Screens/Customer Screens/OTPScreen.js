@@ -1,7 +1,7 @@
 import { Alert,ScrollView,TouchableOpacity,SafeAreaView,Image,View, Text } from 'react-native'
 import React from 'react'
 import Tw from 'twrnc';
-import  {TTFirsNeueTrlLight} from '../assets/fonts/TT Firs Neue Trial Light.ttf';
+import  {TTFirsNeueTrlLight} from '../../assets/fonts/TT Firs Neue Trial Light.ttf';
 import { EvilIcons } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
 import { useState } from 'react';
@@ -61,7 +61,7 @@ const OTPScreen = () => {
         
         
         <View style={Tw`flex-col mt-15 left-16px`}>
-            <Image source={require('../assets/images/lock.png')} style={Tw`w-40px h-40px`}></Image>
+            <Image source={require('../../assets/images/lock.png')} style={Tw`w-40px h-40px`}></Image>
             <View style={[Tw`w-291px h-60px mt-2`,{gap:8}]}>
                 <Text style={[Tw`text-24px text-[#282828]`,{fontFamily: TTFirsNeueTrlLight,fontWeight:"300"}]}>Enter Otp</Text>
                 <Text style={[Tw`text-[#282828] text-14px `,{fontFamily: TTFirsNeueTrlLight, fontWeight:"300"}]}>Enter Otp sent to mobile number *******{number.slice(-3)}</Text>
@@ -109,7 +109,7 @@ const OTPScreen = () => {
         <View style={[Tw`flex-row w-328px h-90px `,{gap:29}]}>
             <TouchableOpacity onPress={deleteBack} style={[Tw`bg-[#FCFCFC] shadow-sm w-90px h-90px pt-19px pr-38px justify-center pb-19px pl-30px`,{gap:10}] }><Feather name="delete" size={20} color="black" /></TouchableOpacity>
             <TouchableOpacity onPress={()=>setOtpInput(otpInput + '0')}  style={[Tw`bg-[#FCFCFC] shadow-sm w-90px h-90px pt-19px pr-38px justify-center pb-19px pl-38px`,{gap:10}] }><Text style={[Tw`text-24px text-[#282828]`,{fontWeight:"400"}]}>0</Text></TouchableOpacity>
-            <TouchableOpacity onPress={submit}  style={[Tw`bg-[#d6f22c] shadow-sm w-90px h-90px pt-19px justify-center pr-38px pb-19px pl-38px`,{gap:10}] }><Image style={Tw`h-28px w-28px`} source={require('../assets/images/forward.png')}></Image></TouchableOpacity>
+            <TouchableOpacity onPress={submit}  style={[Tw`bg-[#d6f22c] shadow-sm w-90px h-90px pt-19px justify-center pr-38px pb-19px pl-38px`,{gap:10}] }><Image style={Tw`h-28px w-28px`} source={require('../../assets/images/forward.png')}></Image></TouchableOpacity>
         </View>
       </ScrollView>
 

@@ -4,7 +4,7 @@ import Tw from 'twrnc';
 import { Fontisto } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { EvilIcons } from '@expo/vector-icons'; 
-import  {TTFirsNeueTrlLight} from '../assets/fonts/TT Firs Neue Trial Light.ttf';
+import  {TTFirsNeueTrlLight} from '../../assets/fonts/TT Firs Neue Trial Light.ttf';
 
 const SelectLanguage = () => {
 
@@ -46,14 +46,14 @@ const SelectLanguage = () => {
           <Text style={[Tw`text-[#0b4348] text-16px font-normal`,{fontFamily: TTFirsNeueTrlLight}]}>Help</Text>
         </TouchableOpacity>
         
-        <Image style={[Tw`mt-10  w-20% h-20%`,{resizeMode:"contain"}]} source={require('../assets/images/QRCabs-image.png')}></Image>
+        <Image style={[Tw`mt-10  w-20% h-20%`,{resizeMode:"contain"}]} source={require('../../assets/images/QRCabs-image.png')}></Image>
       </View>
 
       {/*  choose languague  */}
       <View>
         
         <View style={Tw`flex-col mt-2 ml-5 `}>
-            <Image style={Tw`h-8 w-8 mr-5 my-2`} source={require('../assets/images/langaugeSymbol.png')}></Image> 
+            <Image style={Tw`h-8 w-8 mr-5 my-2`} source={require('../../assets/images/langaugeSymbol.png')}></Image> 
             <Text style={[Tw`text-24px text-[#0b4348] font-normal`,{fontFamily: TTFirsNeueTrlLight}]} > Select Language</Text>
         </View>
             

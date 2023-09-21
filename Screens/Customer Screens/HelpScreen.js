@@ -1,7 +1,7 @@
 import { TextInput,ScrollView,TouchableOpacity,SafeAreaView,Image,View, Text ,KeyboardAvoidingView,Alert} from 'react-native'
 import React, { useState } from 'react'
 import Tw from 'twrnc';
-import  {TTFirsNeueTrlLight} from '../assets/fonts/TT Firs Neue Trial Light.ttf';
+import  {TTFirsNeueTrlLight} from '../../assets/fonts/TT Firs Neue Trial Light.ttf';
 import { EvilIcons } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
